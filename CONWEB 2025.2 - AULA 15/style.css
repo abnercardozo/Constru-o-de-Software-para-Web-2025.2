@@ -1,0 +1,44 @@
+        body {
+            background-color: rgb(2, 2, 49);
+            color: white;
+            text-align: left; 
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: grid;
+            place-items: center;
+            padding: 30px;
+
+        #header {
+            background-image: url(bmo.png);
+            border: 1px #c6c6c6 solid;
+            border-radius: 5px;
+            width: 800px;
+            max-width: 100%;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        
+        label {
+            color: white;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        main {
+            padding: 30px;
+            background-color: #010f28;
+            border: 1px #c6c6c6 solid;
+            border-radius: 5px;
+        }

@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Aula 15 - Calculadora Java</title>
 </head>
 <body>
-    <script type="text/javascript">
-        document.writeln("Cálculadora de Idade")
-    </script>
-    <h1>Cálculadora de Idade</h1>
+     <main>
 
+    <script type="text/javascript">
+        document.writeln("Calculadora de Idade")
+    </script>
+    <div id="header">
+    <h1>Calculadora de Idade</h1>
+</div>
     <label for="dia">Digite o dia o nascimento: </label> <br>
     <input id='inputUsuarioDia' size="60" type="number" min="1" max="31">
     <br>
 
     <label for="mes">Mês:</label><br>
     <select id="mes">
-    <option value="1">Janeiro</option>
-    <option value="2">Fevereiro</option>
-    <option value="3">Março</option>
-    <option value="4">Abril</option>
-    <option value="5">Maio</option>
-    <option value="6">Junho</option>
-    <option value="7">Julho</option>
-    <option value="8">Agosto</option>
-    <option value="9">Setembro</option>
-    <option value="10">Outubro</option>
-    <option value="11">Novembro</option>
-    <option value="12">Dezembro</option>
-     </select> <br>          
+        <option value="1">Janeiro</option>
+        <option value="2">Fevereiro</option>
+        <option value="3">Março</option>
+        <option value="4">Abril</option>
+        <option value="5">Maio</option>
+        <option value="6">Junho</option>
+        <option value="7">Julho</option>
+        <option value="8">Agosto</option>
+        <option value="9">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+    </select> <br>
 
     <label for="ano">Ano de nascimento:</label><br>
     <input id="inputUsuarioAno" size="60" type="number">
@@ -43,19 +48,30 @@
             var mes = document.getElementById('mes').value;
             var ano = document.getElementById('inputUsuarioAno').value;
 
-            if (dia&&mes&&ano){
-            var hoje = new Date();
-            var anoAtual = hoje.getFullYear();
-            var idade = anoAtual - ano;
- 
-            window.alert("Você tem aproximadamente " + idade + " anos!");
-            } else {
+            if (dia == "" || mes == "" || ano == "") {
                 window.alert("Por favor, preencha todos os campos corretamente!")
             }
+            else {
+
+                var hoje = new Date();
+                var anoAtual = hoje.getFullYear();
+                var idade = anoAtual - ano;
+
+                var aniversario = new Date(hoje.getFullYear()+ "/"+mes+"/"+dia )
+
+                if (hoje < aniversario){
+                    idade--
+                }
+
+                window.alert("Você tem aproximadamente " + idade + " anos!");
+
+
+            }
         }
-        
+
     </script>
 
-
+</main>
 </body>
+
 </html>

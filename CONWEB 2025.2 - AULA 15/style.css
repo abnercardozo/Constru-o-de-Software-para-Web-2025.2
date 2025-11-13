@@ -42,3 +42,11 @@
             border: 1px #c6c6c6 solid;
             border-radius: 5px;
         }
+
+        #calculadora {
+            background-image: url(bmo3.png);
+            border: 1px #c6c6c6 solid;
+            border-radius: 5px;
+            width: 800px;
+            max-width: 100%;
+        }
